@@ -11,6 +11,10 @@ public class Parrot extends Pet{
         this.Species = Species;
     }
 
+    public Parrot(Parrot p) {
+        this(p.name, p.age, p.gender, p.TalkingAbility, p.Species);
+    }
+
     public boolean isTalkingAbility() {
         return TalkingAbility;
     }
@@ -27,4 +31,13 @@ public class Parrot extends Pet{
         Species = species;
     }
 
+    public void displayInfo() {
+        System.out.println(
+                "Name: " + name +
+                "\n Age: " + age +
+                "\n Gender: " + gender +
+                "\n TalkingAbility: " + TalkingAbility +
+                "\n Species: " + Species
+        );
+    }
 }

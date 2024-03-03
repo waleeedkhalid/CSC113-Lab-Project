@@ -13,6 +13,10 @@ public abstract class Pet {
         this.isAdopted = false;
     }
 
+    public Pet(Pet p) {
+        this(p.name, p.age, p.gender);
+    }
+
     public String getName() {
         return name;
     }
@@ -37,4 +41,6 @@ public abstract class Pet {
     public void setAdopted(boolean isAdopted) {
         this.isAdopted = isAdopted;
     }
+
+    public abstract void displayInfo();
 }

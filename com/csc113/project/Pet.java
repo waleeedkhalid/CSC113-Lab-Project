@@ -4,13 +4,11 @@ public abstract class Pet {
     protected String name;
     protected int age;
     protected String gender;
-    protected boolean isAdopted;
 
     public Pet(String name, int age, String gender) {
         this.name = name;
         this.age = age;
         this.gender = gender;
-        this.isAdopted = false;
     }
 
     public Pet(Pet p) {
@@ -34,12 +32,6 @@ public abstract class Pet {
     }
     public void setGender(String gender) {
         this.gender = gender;
-    }
-    public boolean isAdopted() {
-        return isAdopted;
-    }
-    public void setAdopted(boolean isAdopted) {
-        this.isAdopted = isAdopted;
     }
 
     public abstract void displayInfo();

@@ -5,9 +5,9 @@ public class Shelter {
     private Pet pets[];
     private int petscount;
 
-    public Shelter(String name, int size) {
+    public Shelter(String name) {
         this.name = name;
-        this.pets = new Pet[size];
+        this.pets = new Pet[10];
         this.petscount = 0;
     }
 
@@ -45,18 +45,17 @@ public class Shelter {
         return true;
     }
 
-    public int getTotalPetsByType(String Type) {
-        int total = 0;
-        for (int i = 0; i < petscount; i++) {
-            if (pets[i] instanceof Parrot && Type.equalsIgnoreCase("Parrot")) {
-                total++;
-            } else if (pets[i] instanceof Dog && Type.equalsIgnoreCase("Dog")) {
-                total++;
-            } else if (pets[i] instanceof Cat && Type.equalsIgnoreCase("Cat")) {
-                total++;
-            }
-        }
-        return total;
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Pet getPet(int index) {
+        if(index > petscount) return null;
+        return pets[index];
     }
 
     public void displayInfo() {
@@ -65,5 +64,21 @@ public class Shelter {
             System.out.print("-");
             pets[i].displayInfo();
         }
+    }
+
+    public Pet[] getPets() {
+        return pets;
+    }
+
+    public void setPets(Pet[] pets) {
+        this.pets = pets;
+    }
+
+    public int getPetscount() {
+        return petscount;
+    }
+
+    public void setPetscount(int petscount) {
+        this.petscount = petscount;
     }
 }

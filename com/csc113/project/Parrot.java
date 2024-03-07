@@ -34,10 +34,10 @@ public class Parrot extends Pet{
     public void displayInfo() {
         System.out.println(
                 "Name: " + name +
-                "\n Age: " + age +
-                "\n Gender: " + gender +
-                "\n TalkingAbility: " + TalkingAbility +
-                "\n Species: " + Species
+                        "\n Age: " + age +
+                        "\n Gender: " + gender +
+                        "\n TalkingAbility: " + TalkingAbility +
+                        "\n Species: " + Species
         );
     }
 }

@@ -33,10 +33,10 @@ public class Cat extends Pet {
     public void displayInfo() {
         System.out.println(
                 "Name: " + name +
-                "\n Age: " + age +
-                "\n Gender: " + gender +
-                "\n Color: " + Color +
-                "\n Trait: " + Trait
+                        "\n Age: " + age +
+                        "\n Gender: " + gender +
+                        "\n Color: " + Color +
+                        "\n Trait: " + Trait
         );
     }
 }
